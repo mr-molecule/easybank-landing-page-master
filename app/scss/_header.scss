@@ -1,0 +1,37 @@
+@import "variables";
+
+.header{
+
+    nav{
+        padding:24px;
+    }
+    
+    &__logo{
+        
+        img{
+            
+        }
+    }
+
+    &__menu{ //Mobile Menu
+
+        > span { //Direct Child
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkblue;
+
+            &:not(:last-child){ //Should Be inside the span -----wasted 1 hr finding this !
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    &__links{
+
+        a{
+            font-size: $font-sm;   
+            color:$grayishblue;
+        }   
+    }
+}

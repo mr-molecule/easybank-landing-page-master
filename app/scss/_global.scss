@@ -1,0 +1,65 @@
+html{
+    font-size:100%;
+    box-sizing: border-box;
+}
+
+*, *::before *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    color: $grayishblue;
+    font-weight: 300;
+    font-family: 'Public Sans',sans-serif;
+    line-height: 1.3px;
+}
+
+
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+
+//Flexbox Styles
+
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+button, .button{  //Should use comma when adding two classes or more
+    padding: 1rem 1.875rem;
+    background:linear-gradient(to right, $limegreen,$brightcyan);
+    color: $white;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    font-size: $font-sm;
+    font-weight: 400;
+}
+
+//Visiblity
+.hide-for-mobile{ //Hide for mobile  tablets
+    @include breakpoints-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{ //Hide for Desktop
+    @include breakpoints-up(large){
+        display: none;
+    }
+}
