@@ -3,13 +3,14 @@
 .header{
 
     nav{
-        padding:24px;
+        padding:1.065rem 1.5rem;
     }
     
     &__logo{
         
         img{
-            
+            width: 8.8125rem;
+            height: 1.375rem;
         }
     }
 
@@ -30,8 +31,49 @@
     &__links{
 
         a{
-            font-size: $font-sm;   
+            position: relative;
+            font-size: $font-sm;  
             color:$grayishblue;
-        }   
+            position: relative;
+            transition:color 300ms ease-in-out;
+            
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+
+            &::before{
+                content: "";
+                display: block;
+                height: 5px;
+                background: linear-gradient(to right, $limegreen,$brightcyan);
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+                left: 0;
+                right: 0;
+                bottom: -30px;
+                position: absolute;
+            }
+
+            &:hover{
+                color:$darkblue; 
+                &::before{
+                    background: linear-gradient(to right, $limegreen,$brightcyan);
+                    opacity: 1;
+                }
+            }
+            
+        }
+
+        //Not working ? Need to Figure out why ?
+        &__cta{
+            font-size: $font-sm;
+            color: white;
+            transition: opacity 300ms ease-in-out;
+
+            &:hover{
+                opacity: 0.75;
+            }
+        }
+
     }
 }
