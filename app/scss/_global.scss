@@ -15,6 +15,7 @@ body{
     font-weight: 300;
     font-family: 'Public Sans',sans-serif;
     line-height: 1.3px;
+    
 }
 
 
@@ -41,7 +42,7 @@ a, a:visited, a:hover{
 }
 
 button, .button{  //Should use comma when adding two classes or more
-    padding: 1rem 1.875rem;
+    padding: 0.875rem 2.1875rem;
     background:linear-gradient(to right, $limegreen,$brightcyan);
     color: $white;
     border-radius: 50px;
@@ -51,15 +52,44 @@ button, .button{  //Should use comma when adding two classes or more
     font-weight: 400;
 }
 
+
+
+
+//Mixins 
+
+@media(min-width: 64em){
+
+}
+
+//Breakpoints
+
+//640px,1024px,1400px
+$breakpoint-up: ("medium":"40em","large":"64em","xlarge":"87.5em");
+
+//639,1023px,1339px
+$breakpoint-down: ("small":"39.9375em","medium":"63.9375em","large":"87.4375em");
+
+@mixin breakpoint-up($size){
+    @media (min-width :map-get($breakpoint-up,$size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size){
+    @media (max-width :map-get($breakpoint-down,$size)) { 
+        @content;
+    }
+}
+
 //Visiblity
 .hide-for-mobile{ //Hide for mobile  tablets
-    @include breakpoints-down(medium){
+    @include breakpoint-down(medium){
         display: none;
     }
 }
 
 .hide-for-desktop{ //Hide for Desktop
-    @include breakpoints-up(large){
+    @include breakpoint-up(large){
         display: none;
     }
 }
