@@ -6,7 +6,7 @@
 
      &.open{ ///Hamburger Menu Open Class 
 
-        .header__menu{
+        .header__toggle{
             > span:first-child{
                 transform: rotate(45deg);
             }
@@ -23,7 +23,7 @@
         //display: none;
         opacity: 0;
         position: fixed;
-        top:3.75rem;
+        top: 0px;
         bottom: 0px;
         right: 0px;
         left: 0px;
@@ -31,7 +31,10 @@
      }
 
     nav{
-        padding:1.065rem 1.5rem; // 1rem is equal to 16px
+        position: relative;
+        background: #fff;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
     }
     
     &__logo{
@@ -42,7 +45,7 @@
         }
     }
 
-    &__menu{ //Mobile Menu
+    &__toggle{ //Mobile Toggele Menu
 
         > span { //Direct Child
             display: block;
@@ -105,13 +108,42 @@
             }
         }
     }
+
+    &__menu{
+        
+        background: $white;
+        //margin: 0px 1.5rem; //Margin has been disabled since width property will do the job
+        padding: 1.625rem;
+        border-radius: 7px;
+        position: absolute;
+        width: calc(90% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1.7rem;
+
+        a{
+            display: block;
+            padding: 1.3rem; //adjusted as per our screen size
+            color: $darkblue;
+            text-align: center;
+        }
+    }
 }
 
 //Keyframes
 
+.has-fade{
+    visibility: hidden;
+}
+
 @keyframes fade-in{
     from{
         visibility: hidden;
+        opacity: 0;
+    }
+
+    1%{
+        visibility: visible;
         opacity: 0;
     }
 
@@ -122,7 +154,7 @@
 }
 
 .fade-in{
-    animation: fade-in 300ms ease-in-out forwards;
+    animation: fade-in 200ms ease-in-out forwards;
 }
 
 
@@ -144,5 +176,5 @@
 }
 
 .fade-out{
-    animation: fade-out 300ms ease-in-out forwards;
+    animation: fade-out 200ms ease-in-out forwards;
 }
