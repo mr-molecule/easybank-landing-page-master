@@ -1,3 +1,35 @@
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    visibility: hidden;
+    opacity: 1;
+  }
+  to {
+    visibility: visible;
+    opacity: 0;
+  }
+}
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -22,6 +54,17 @@ body.noscroll {
 
 h1, h2, h3 {
   margin-top: 0px;
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
 }
 
 a, a:visited, a:hover {
@@ -87,18 +130,6 @@ button:hover, .button:hover {
 }
 .container--pl {
   padding-left: 1.5rem;
-}
-
-@media (max-width: 63.9375em) {
-  .hide-for-mobile {
-    display: none;
-  }
-}
-
-@media (min-width: 64em) {
-  .hide-for-desktop {
-    display: none;
-  }
 }
 
 .header.open .header__toggle > span:first-child {
@@ -329,7 +360,7 @@ button:hover, .button:hover {
   }
 }
 .feature__item {
-  border: 1px solid red;
+  border: 1px solid magenta;
   padding: 0.9375rem;
 }
 @media (min-width: 40em) {

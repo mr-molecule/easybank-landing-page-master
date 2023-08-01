@@ -1,7 +1,8 @@
 @import "_variables"; //should be initialised first since we are using in the below sheets
+@import "_mixins";
+@import "_keyframes";
+
 @import "_global";
-
-
 @import "_header";
 @import "_hero";
 @import "_features";
