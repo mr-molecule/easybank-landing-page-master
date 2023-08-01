@@ -80,24 +80,6 @@
             order: 1; //order shown in flex box
             text-align: left;
         }
-
-        h1{
-            font-weight: 300;
-            font-size: 2.31rem;
-            color: $darkblue;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-
-            @include breakpoint-up(large){
-                font-size: 3.25rem;
-            }
-        }
-
-        p{
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 1.25rem;
-            
-        }
+        
     }
 }
