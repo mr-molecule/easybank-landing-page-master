@@ -1,17 +1,16 @@
-@import "_global";
 
 .feature{
 
     &__grid{
 
-        @include breakpoint-up(large){
+        @media (min-width: 64em){
             display: flex;
         }
     }
 
     &__item{
 
-        @include breakpoint-up(large){
+        @media (min-width: 64em){
             flex: 1;
         }
     }

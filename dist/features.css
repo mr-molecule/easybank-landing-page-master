@@ -1,0 +1,10 @@
+@media (min-width: 64em) {
+  .feature__grid {
+    display: flex;
+  }
+}
+@media (min-width: 64em) {
+  .feature__item {
+    flex: 1;
+  }
+}/*# sourceMappingURL=features.css.map */
