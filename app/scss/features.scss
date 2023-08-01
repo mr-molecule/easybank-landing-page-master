@@ -3,13 +3,15 @@
 
     &__grid{
 
+        
         @media (min-width: 64em){
             display: flex;
         }
     }
 
     &__item{
-
+        border: 1px solid magenta;
+        padding: 0.9375rem;
         @media (min-width: 64em){
             flex: 1;
         }
