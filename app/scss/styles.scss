@@ -1,5 +1,7 @@
-@import "_header";
+@import "_variables"; //should be initialised first since we are using in the below sheets
 @import "_global";
-@import "_variables";
-@import "__hero";
-@import "features";
+
+
+@import "_header";
+@import "_hero";
+@import "_features";

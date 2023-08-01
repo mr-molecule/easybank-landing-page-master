@@ -3,16 +3,20 @@
 
     &__grid{
 
-        
-        @media (min-width: 64em){
+        @include breakpoint-up(medium){
             display: flex;
         }
     }
 
     &__item{
-        border: 1px solid magenta;
+        border: 1px solid red;
         padding: 0.9375rem;
-        @media (min-width: 64em){
+
+        @include breakpoint-up(medium){
+            flex: 1 0 50%;
+        }
+
+        @include breakpoint-up(large){
             flex: 1;
         }
     }
