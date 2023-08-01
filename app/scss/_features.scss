@@ -1,6 +1,18 @@
 
 .feature{
 
+    &__content{
+       background-color: $lightgreyishblue; //Need to change the color
+    }
+    &__intro{
+
+        margin-bottom: 3.75rem;
+
+        @include breakpoint-up(large){
+            width: 60%;
+        }
+    }
+
     &__grid{
 
         @include breakpoint-up(medium){
@@ -23,15 +35,28 @@
     }
 
     &__icon{
-
+        margin-bottom: 1.875rem;
+        @include breakpoint-up(large){
+           margin-bottom: 2.75rem;
+        }
     }
 
     &__title{
-
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: $darkblue;
+        line-height: 1.15;
+        margin-top: 0px;
+        margin-bottom: 1.5rem;
+        @include breakpoint-up(large){
+            font-size:1.5rem;
+            margin-bottom: 2.125rem;
+        }
     }
 
     &__description{
-
+        font-size: 0.875rem;
+        line-height: 1.5;
     }
 }
 
