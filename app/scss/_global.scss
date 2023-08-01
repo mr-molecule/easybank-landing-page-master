@@ -25,6 +25,16 @@ h1,h2,h3{
     margin-top: 0px;
 }
 
+h2{
+    font-size: 1.875rem;
+    margin-bottom: 1.5625rem;
+    
+    @include breakpoint-up(large){
+        font-size: 2.25rem;    
+        margin-bottom: 2.25rem;
+    }
+}
+
 
 a, a:visited, a:hover{
     text-decoration: none;
@@ -98,45 +108,4 @@ button, .button{  //Should use comma when adding two classes or more
         padding-left:1.5rem; // 1rem is equal to 16px
     }
 
-}
-
-
-
-
-//Mixins 
-
-@media (min-width: 64em){
-    // styles go here
-  }
-  
-  // Breakpoints
-  // 640px, 1024px, 1400px
-  $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
-  
-  // 639px, 1023px, 1399px
-  $breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em");
-  
-  @mixin breakpoint-up($size){
-    @media (min-width: map-get($breakpoints-up, $size)){
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-down($size){
-    @media (max-width: map-get($breakpoints-down, $size)){
-      @content;
-    }
-  }
-
-//Visiblity
-.hide-for-mobile{ //Hide for mobile  tablets
-    @include breakpoint-down(medium){
-        display: none;
-    }
-}
-
-.hide-for-desktop{ //Hide for Desktop
-    @include breakpoint-up(large){
-        display: none;
-    }
 }
