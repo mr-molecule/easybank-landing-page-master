@@ -15,19 +15,32 @@
 
     &__grid{
 
+        //Using Display Grid instead of Flexs
+        display: grid;
+        grid-template: 1fr; //1 fr stands for 1 fractional unit
+        gap: 0.5rem;
+
         @include breakpoint-up(medium){
-            display: flex;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(2,1fr); //repeat takes 2 params first one - how many cols & second one - fractiona units
         }
+
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        // @include breakpoint-up(medium){
+        //     display: flex;
+        //     flex-wrap: wrap;
+        // }
     }
 
     &__item{
         //border: 1px solid magenta;
-        padding: 0.9375rem;
+        padding: 0.725rem;
 
-        @include breakpoint-up(medium){
-            flex: 1 0 50%;
-        }
+        // @include breakpoint-up(medium){
+        //     flex: 1 0 50%;
+        // }
 
         @include breakpoint-up(large){
             flex: 1;
@@ -50,7 +63,6 @@
         margin-bottom: 1.5rem;
         @include breakpoint-up(large){
             font-size:1.5rem;
-            margin-bottom: 2.125rem;
         }
     }
 
