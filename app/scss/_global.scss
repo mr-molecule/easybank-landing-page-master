@@ -15,7 +15,8 @@ body{
     font-weight: 300;
     font-family: 'Public Sans',sans-serif;
     line-height: 1.3;
-    min-height: 200vh;
+    min-height: 350vh;
+    overflow-x: hidden;
 
     &.noscroll{
         overflow: hidden;

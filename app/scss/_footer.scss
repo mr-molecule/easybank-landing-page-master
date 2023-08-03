@@ -1,0 +1,101 @@
+.footer{
+
+    background-color: $darkblue;
+    color: $white;
+    padding: 2.5rem;
+    text-align: center;
+    
+    a { //To make sure anchor links also will get the color white
+        color: $white;
+    }
+
+    @include breakpoint-up(large){
+        display: grid;
+        grid-template-columns: repeat(3,1fr) 2fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "logo col1 col2 cta"
+        "social col1 col2 cta";
+        justify-items: start;
+    }
+
+    &__logo{
+        display: inline-block;
+
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        }
+
+        @include breakpoint-up(large){
+            grid-area: logo;
+        }
+    }
+
+    &__social{
+
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        }
+
+        a {
+            display: inline-block;
+        }
+        a:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        @include breakpoint-up(large){
+            grid-area: social;
+        }
+    }
+
+    &__links{
+
+        display: flex;
+        flex-direction: column; //Can stack the content
+        align-items: center; //Since it is an horizontal axis align items is used 
+
+        @include breakpoint-up(large){
+            align-items: start;
+        }
+
+        &.col1{
+            @include breakpoint-up(large){
+                grid-area: col1;
+            }
+        }
+
+        &.col2{
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            }
+           @include breakpoint-up(large){
+            grid-area: col2;
+            }
+        }
+
+        a {
+          line-height: 1.7;
+        }
+
+    }
+
+    &__cta{
+
+
+        button.button{
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            }
+        }
+
+        @include breakpoint-up(large){
+            grid-area: cta;
+            text-align: right;
+            justify-self: end;
+        }
+    }
+
+    &__copyright{
+
+    }
+}
