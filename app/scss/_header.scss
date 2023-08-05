@@ -28,6 +28,7 @@
         right: 0px;
         left: 0px;
         background: linear-gradient($darkblue,transparent);
+        z-index: 1; //This fixed the menu bar issue Z index defines the order of overlapping HTML elements
      }
 
     nav{
@@ -35,6 +36,7 @@
         background: #fff;
         padding-top: 1.0625rem;
         padding-bottom: 1.0625rem;
+        z-index: 2;
     }
     
     &__logo{
@@ -109,6 +111,7 @@
         left: 50%;
         transform: translateX(-50%);
         margin-top: 1.7rem;
+        z-index: 1;
 
         a{
             display: block;

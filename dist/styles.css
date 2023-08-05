@@ -196,12 +196,14 @@ button:hover, .button:hover {
   right: 0px;
   left: 0px;
   background: linear-gradient(hsl(233, 26%, 24%), transparent);
+  z-index: 1;
 }
 .header nav {
   position: relative;
   background: #fff;
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
+  z-index: 2;
 }
 .header__logo img {
   width: 8.8125rem;
@@ -256,6 +258,7 @@ button:hover, .button:hover {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 1.7rem;
+  z-index: 1;
 }
 .header__menu a {
   display: block;
